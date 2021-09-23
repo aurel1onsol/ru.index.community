@@ -1,20 +1,10 @@
-import { AppBar, Box, Button, Container, Grid, Toolbar, Typography } from '@mui/material'
+import { AppBar, Button, Box, Container, Grid, Toolbar, Typography } from '@mui/material'
 import RuFediLogo from '../svg/ru-fedi'
 import React from 'react'
 import { graphql } from 'gatsby'
 import { styled } from '@mui/styles'
-import Masonry from '@mui/lab/Masonry'
-import MasonryItem from '@mui/lab/MasonryItem'
 import Link from '../components/Link'
 import GroupCard from '../components/GroupCard'
-
-const LogoWrapper = styled('div')({
-  height: 48
-})
-
-const Grow = styled('div')({
-  flexGrow: 1
-})
 
 export default function Communities ({ data }) {
   const instances = data.allGroupsJson.nodes
@@ -30,11 +20,11 @@ export default function Communities ({ data }) {
       >
         <Toolbar>
           <Link to='/'>
-            <LogoWrapper>
+            <div style={{ height: 48 }}>
               <RuFediLogo />
-            </LogoWrapper>
+            </div>
           </Link>
-          <Grow />
+          <div style={{ flexGrow: 1 }} />
           <Link to='/communities' color='inherit' underline='none'>
             <Button color='inherit'>Серверы</Button>
           </Link>
@@ -43,18 +33,20 @@ export default function Communities ({ data }) {
           </Link>
         </Toolbar>
       </AppBar>
-      <Container maxWidth='xl'>
-        <Grid container spacing={3} justify='space-around'>
-          <Grid item container xs={12} spacing={3} justify='left'>
-            <Grid item xs={12} sm={12} md={10}>
-              <Typography variant='h2'>Группы</Typography>
+      <Box py={1}>
+        <Container maxWidth='xl'>
+          <Grid container spacing={3} justify='space-around'>
+            <Grid item container xs={12} spacing={3} justify='left'>
+              <Grid item xs={12} sm={12} md={10}>
+                <Typography variant='h2'>Группы</Typography>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} md={12} container spacing={2} justify='left'>
+              {instances.map((i) => <Grid item xs={12} sm={6} md={4} key={i.id}><GroupCard instance={i} /></Grid>)}
             </Grid>
           </Grid>
-          <Grid item xs={12} md={12} container spacing={2} justify='left'>
-            {instances.map((i) => <Grid item xs={12} sm={6} md={4} key={i.id}><GroupCard instance={i} /></Grid>)}
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </Box>
     </div>
   )
 }

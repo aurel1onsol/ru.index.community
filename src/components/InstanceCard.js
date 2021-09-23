@@ -8,7 +8,6 @@ import MisskeyLogo from '../svg/misskey'
 import FriendicaLogo from '../svg/friendica'
 import HubzillaLogo from '../svg/hubzilla'
 import CloudflareLogo from '../svg/cloudflare'
-import { styled } from '@mui/styles'
 
 const getPlural = (number, one, few, many) => {
   const plurals = new Intl.PluralRules('ru-RU')
@@ -23,10 +22,6 @@ const getPlural = (number, one, few, many) => {
       return many
   }
 }
-
-const Stat = styled('div')({
-  display: 'flex'
-})
 
 export default function InstanceCard ({ instance }) {
   return (
@@ -87,33 +82,33 @@ export default function InstanceCard ({ instance }) {
             width: '100%'
           }}
           >
-            <Stat>
+            <div style={{ display: 'flex' }}>
               <PeopleOutlined />
               <Typography style={{ paddingLeft: 4 }} variant='subtitle1' color='textSecondary' component='p'>
                 {instance.node.users.total} {getPlural(instance.node.users.total, 'пользователь', 'пользователя', 'пользователей')}
               </Typography>
-            </Stat>
+            </div>
             {false &&
-              <Stat>
+              <div style={{ display: 'flex' }}>
                 <EditOutlined />
                 <Typography style={{ paddingLeft: 4 }} variant='subtitle1' color='textSecondary' component='p'>
                   {instance.node.posting.max_chars} {getPlural(instance.node.posting.max_chars, 'символ', 'символа', 'символов')}
                 </Typography>
-              </Stat>}
+              </div>}
             {instance.node.administration?.provider &&
-              <Stat>
+              <div style={{ display: 'flex' }}>
                 <DnsOutlined />
                 <Typography style={{ paddingLeft: 4 }} variant='subtitle1' color='textSecondary' component='p'>
                   {instance.node.administration.provider}
                 </Typography>
-              </Stat>}
+              </div>}
             {instance.node.administration?.cloudflare &&
-              <Stat>
+              <div style={{ display: 'flex' }}>
                 <CloudflareLogo color='#d08770' size='2em' />
                 <Typography style={{ paddingLeft: 4, color: '#d08770' }} variant='subtitle1' color='inherit' component='p'>
                   Использует Cloudflare
                 </Typography>
-              </Stat>}
+              </div>}
           </Container>
         </CardActionArea>
       </Card>

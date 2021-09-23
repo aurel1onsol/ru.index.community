@@ -1,6 +1,5 @@
 import { PeopleOutlined } from '@mui/icons-material'
 import { Box, Card, CardActionArea, CardContent, CardMedia, Container, Link, Typography } from '@mui/material'
-import { styled } from '@mui/styles'
 import React from 'react'
 import ImageLoader from './ImageLoader'
 
@@ -17,10 +16,6 @@ const getPlural = (number, one, few, many) => {
       return many
   }
 }
-
-const Stat = styled('div')({
-  display: 'flex'
-})
 
 export default function GroupCard ({ instance }) {
   return (
@@ -76,7 +71,7 @@ export default function GroupCard ({ instance }) {
             width: '100%'
           }}
           >
-            <Stat>
+            <div style={{ display: 'flex' }}>
               {instance.members
                 ? <>
                   <PeopleOutlined />
@@ -87,7 +82,7 @@ export default function GroupCard ({ instance }) {
                 : <Typography style={{ paddingLeft: 4 }} variant='subtitle1' color='textSecondary' component='p'>
                   Подписчики скрыты
                   </Typography>}
-            </Stat>
+            </div>
           </Container>
         </CardActionArea>
       </Card>
