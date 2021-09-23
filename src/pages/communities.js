@@ -47,10 +47,10 @@ export default function Communities ({ data }) {
             </LogoWrapper>
           </Link>
           <Grow />
-          <Link to='/communities' color='inherit'>
+          <Link to='/communities' color='inherit' underline='none'>
             <Button color='inherit'>Сервера</Button>
           </Link>
-          <Link to='/groups' color='inherit'>
+          <Link to='/groups' color='inherit' underline='none'>
             <Button color='inherit'>Группы</Button>
           </Link>
         </Toolbar>
@@ -90,7 +90,7 @@ export default function Communities ({ data }) {
             </Grid>
           </Grid>
           <Grid item xs={12} md={12} justify='left'>
-            <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
+            <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} sx={{overflow: 'hidden'}}>
               {filter.length === 0 ? instances.map((i) => <MasonryItem key={i.node.id}><Box><InstanceCard instance={i} /></Box></MasonryItem>)
                 : instances.map((i) => filter.includes(i.node.software.name) && <MasonryItem key={i.node.id}><Box><InstanceCard instance={i} /></Box></MasonryItem>)}
             </Masonry>
