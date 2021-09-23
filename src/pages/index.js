@@ -28,7 +28,7 @@ export default function Communities ({ data }) {
                 <CardActionArea>
                   <CardHeader
                     avatar={<DnsOutlined fontSize='large' />}
-                    title='Сервера'
+                    title='Серверы'
                     subheader='Каталог серверов русскоязычного созвездия федивёрса'
                   />
                 </CardActionArea>

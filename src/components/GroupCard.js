@@ -26,16 +26,22 @@ export default function GroupCard ({ instance }) {
   return (
     <Link href={'https://' + instance.uri} target='_blank' rel='noreferrer' underline='none'>
       <Card sx={{
-        display: 'flex',
-        flexDirection: 'column'
+        height: '100%'
       }}
       >
-        <CardActionArea>
+        <CardActionArea sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          height: '100%'
+        }}
+        >
 
           <Container style={{
             display: 'flex',
             alignItems: 'center',
-            padding: 16
+            padding: 16,
+            width: '100%'
           }}
           >
 
@@ -49,12 +55,13 @@ export default function GroupCard ({ instance }) {
               </Box>}
           </Container>
           {instance.thumbnail &&
-            <CardMedia style={{ height: 150 }}>
+            <CardMedia style={{ height: 150, width: '100%' }}>
               <ImageLoader imgName={instance.thumbnail} />
             </CardMedia>}
           <CardContent style={{
             background: '#434B5E',
-            flexGrow: 2
+            flexGrow: 2,
+            width: '100%'
           }}
           >
             <Typography variant='body2' color='textSecondary' component='p'>
@@ -65,7 +72,8 @@ export default function GroupCard ({ instance }) {
             padding: 16,
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'space-evenly'
+            justifyContent: 'space-evenly',
+            width: '100%'
           }}
           >
             <Stat>

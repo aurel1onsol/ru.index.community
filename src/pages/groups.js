@@ -36,7 +36,7 @@ export default function Communities ({ data }) {
           </Link>
           <Grow />
           <Link to='/communities' color='inherit' underline='none'>
-            <Button color='inherit'>Сервера</Button>
+            <Button color='inherit'>Серверы</Button>
           </Link>
           <Link to='/groups' color='inherit' underline='none'>
             <Button color='inherit'>Группы</Button>
@@ -50,10 +50,8 @@ export default function Communities ({ data }) {
               <Typography variant='h2'>Группы</Typography>
             </Grid>
           </Grid>
-          <Grid item xs={12} md={12} justify='left'>
-            <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} sx={{overflow: 'inherit'}}>
-              {instances.map((i) => <MasonryItem key={i.id}><Box><GroupCard instance={i} /></Box></MasonryItem>)}
-            </Masonry>
+          <Grid item xs={12} md={12} container spacing={2} justify='left'>
+            {instances.map((i) => <Grid item xs={12} sm={6} md={4} key={i.id}><GroupCard instance={i} /></Grid>)}
           </Grid>
         </Grid>
       </Container>

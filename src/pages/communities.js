@@ -48,55 +48,56 @@ export default function Communities ({ data }) {
           </Link>
           <Grow />
           <Link to='/communities' color='inherit' underline='none'>
-            <Button color='inherit'>Сервера</Button>
+            <Button color='inherit'>Серверы</Button>
           </Link>
           <Link to='/groups' color='inherit' underline='none'>
             <Button color='inherit'>Группы</Button>
           </Link>
         </Toolbar>
       </AppBar>
-      <Container maxWidth='xl'>
-        <Grid container spacing={3} justify='space-around'>
-          <Grid item container xs={12} spacing={3} justify='left'>
-            <Grid item xs={12} sm={12} md={10}>
-              <Typography variant='h2'>Сервера</Typography>
-            </Grid>
-            <Grid item xs={12} sm={12} md={7}>
-              <Typography variant='body1'>Перед тем как регистрироваться, просматривай локальную ленту сервера, описание сервера, и список его самых активных пользователей. Так ты быстро поймёшь, какие люди на этом сервере обитают, и будет ли тебе там комфортно.</Typography>
-            </Grid>
+      <Box py={1}>
 
-            <Grid item xs={12} justify='left'>
-              <ToggleButtonGroup
-                aria-label='text alignment'
-                value={filter}
-                onChange={handleFilter}
-              >
-                <ToggleButton value='mastodon' aria-label='left aligned'>
-                  <MastodonLogo size='2em' color='#fff' />
-                </ToggleButton>
-                <ToggleButton value='pleroma' aria-label='centered'>
-                  <PleromaLogo size='2em' color='#fff' />
-                </ToggleButton>
-                <ToggleButton value='misskey' aria-label='centered'>
-                  <MisskeyLogo size='2em' color='#fff' />
-                </ToggleButton>
-                <ToggleButton value='friendica' aria-label='centered'>
-                  <FriendicaLogo size='2em' color='#fff' />
-                </ToggleButton>
-                <ToggleButton value='hubzilla' aria-label='right aligned'>
-                  <HubzillaLogo size='2em' color='#fff' />
-                </ToggleButton>
-              </ToggleButtonGroup>
+        <Container maxWidth='xl'>
+          <Grid container spacing={3} justify='space-around'>
+            <Grid item container xs={12} spacing={3} justify='left'>
+              <Grid item xs={12} sm={12} md={10}>
+                <Typography variant='h2'>Серверы</Typography>
+              </Grid>
+              <Grid item xs={12} sm={12} md={7}>
+                <Typography variant='body1'>Перед тем как регистрироваться, просматривай локальную ленту сервера, описание сервера, и список его самых активных пользователей. Так ты быстро поймёшь, какие люди на этом сервере обитают, и будет ли тебе там комфортно.</Typography>
+              </Grid>
+
+              <Grid item xs={12} justify='left'>
+                <ToggleButtonGroup
+                  aria-label='text alignment'
+                  value={filter}
+                  onChange={handleFilter}
+                >
+                  <ToggleButton value='mastodon' aria-label='left aligned'>
+                    <MastodonLogo size='2em' color='#fff' />
+                  </ToggleButton>
+                  <ToggleButton value='pleroma' aria-label='centered'>
+                    <PleromaLogo size='2em' color='#fff' />
+                  </ToggleButton>
+                  <ToggleButton value='misskey' aria-label='centered'>
+                    <MisskeyLogo size='2em' color='#fff' />
+                  </ToggleButton>
+                  <ToggleButton value='friendica' aria-label='centered'>
+                    <FriendicaLogo size='2em' color='#fff' />
+                  </ToggleButton>
+                  <ToggleButton value='hubzilla' aria-label='right aligned'>
+                    <HubzillaLogo size='2em' color='#fff' />
+                  </ToggleButton>
+                </ToggleButtonGroup>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} md={12} container spacing={2} justify='left'>
+              {filter.length === 0 ? instances.map((i) => <Grid item xs={12} sm={6} md={4} key={i.node.id}><InstanceCard instance={i} /></Grid>)
+                : instances.map((i) => filter.includes(i.node.software.name) && <Grid item xs={12} sm={6} md={4} key={i.node.id}><InstanceCard instance={i} /></Grid>)}
             </Grid>
           </Grid>
-          <Grid item xs={12} md={12} justify='left'>
-            <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} sx={{overflow: 'inherit'}}>
-              {filter.length === 0 ? instances.map((i) => <MasonryItem key={i.node.id}><Box><InstanceCard instance={i} /></Box></MasonryItem>)
-                : instances.map((i) => filter.includes(i.node.software.name) && <MasonryItem key={i.node.id}><Box><InstanceCard instance={i} /></Box></MasonryItem>)}
-            </Masonry>
-          </Grid>
-        </Grid>
-      </Container>
+        </Container>
+      </Box>
     </div>
   )
 }

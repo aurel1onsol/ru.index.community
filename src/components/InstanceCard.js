@@ -32,15 +32,21 @@ export default function InstanceCard ({ instance }) {
   return (
     <Link href={'https://' + instance.node.uri} target='_blank' rel='noreferrer' underline='none'>
       <Card sx={{
-        display: 'flex',
-        flexDirection: 'column'
+        height: '100%'
       }}
       >
-        <CardActionArea>
+        <CardActionArea sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          height: '100%'
+        }}
+        >
           <Container style={{
             display: 'flex',
             alignItems: 'center',
-            padding: 16
+            padding: 16,
+            width: '100%'
           }}
           >
             <div style={{ flex: '1 1 auto' }}>
@@ -59,13 +65,14 @@ export default function InstanceCard ({ instance }) {
                       ? <HubzillaLogo color='white' size='3em' /> : null}
           </Container>
           {instance.node.thumbnail
-            ? <CardMedia style={{ height: 150 }}>
+            ? <CardMedia style={{ height: 150, width: '100%' }}>
               <ImageLoader imgName={instance.node.thumbnail} />
             </CardMedia>
             : null}
           <CardContent style={{
             background: '#434B5E',
-            flexGrow: 2
+            flexGrow: 2,
+            width: '100%'
           }}
           >
             <Typography variant='body2' color='textSecondary' component='p'>
@@ -76,7 +83,8 @@ export default function InstanceCard ({ instance }) {
             padding: 16,
             display: 'flex',
             flexWrap: 'wrap',
-            justifyContent: 'space-evenly'
+            justifyContent: 'space-evenly',
+            width: '100%'
           }}
           >
             <Stat>
