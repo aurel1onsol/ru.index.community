@@ -1,0 +1,10 @@
+{
+    "$schema": "../schemas/groups.json",
+    "uri": "lor.sh/@ru",
+    "handle": "@ru@lor.sh",
+    "title": "ru",
+    "short_description": "Агрегатор публичных сообщений с lor.sh, mstdn.netwhood.online, mastodon.ml и aspirant.de.",
+    "icon": "ru@lor.sh.icon.png",
+    "thumbnail": "ru@lor.sh.banner.png",
+    "members": 206
+}

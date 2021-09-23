@@ -1,0 +1,19 @@
+{
+    "$schema": "../schemas/instances.json",
+    "uri": "quietplace.xyz",
+    "title": "A Quiet Place",
+    "short_description": "This is a city that holds the many dreams and stories of its people.\nMost of these stories are left untold.\nBut some few find solace in the embrace of bricks and wood and glass.\nThey are told over drinks, then take up residence in some stranger's memories.\nIn one corner of the city stand a Quiet Place.\nA place that is only open when the sun is sleeping.\nA place where people share their stories.\nAnd these are their stories...",
+    "thumbnail": "quietplace.xyz.png",
+    "software": {
+        "name": "misskey"
+    },
+    "users": {
+        "total": 81
+    },
+    "posting": {
+        "max_chars": 5000
+    },
+    "administration": {
+        "provider": "Scaleway"
+    }
+}

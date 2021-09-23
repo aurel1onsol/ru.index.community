@@ -1,0 +1,9 @@
+{
+    "$schema": "../schemas/groups.json",
+    "uri": "zhub.link/@city4people",
+    "handle": "@city4people@zhub.link",
+    "title": "городДляЛюдей",
+    "short_description": "Узкотематическая группа про урбанистику, архитектуру и фантастику",
+    "icon": "city4people@zhub.link.icon.png",
+    "thumbnail": "city4people@zhub.link.banner.png"
+}

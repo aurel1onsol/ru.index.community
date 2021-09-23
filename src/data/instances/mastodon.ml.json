@@ -1,0 +1,26 @@
+{
+    "$schema": "../schemas/instances.json",
+    "uri": "mastodon.ml",
+    "short_description": "Русская нода социальной сети \"Мастодонт\", части Fediverse - всемирной федерации социальных сетей. Зона общения, свободная от рекламы и шпионажа, теперь и в России.",
+    "thumbnail": "mastodon.ml.png",
+    "software": {
+        "name": "mastodon",
+        "version": "3.2.0"
+    },
+    "users": {
+        "total": 1055
+    },
+    "posting": {
+        "max_chars": 1000,
+        "poll_settings": {
+            "max_option_chars": 25,
+            "max_options": 4
+        },
+        "post_formats": [
+            "text/plain"
+        ]
+    },
+    "administration": {
+        "provider": "Hetzner"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "$schema": "../schemas/instances.json",
+    "uri": "freehub.space",
+    "short_description": "FreeHub — хаб русскоязычного сегмента сети Hubzilla, который создавался как место общения свободных людей. Мы приветствуем всех, для кого личная свобода - не пустой звук.",
+    "thumbnail": "freehub.space.png",
+    "software": {
+        "name": "hubzilla"
+    },
+    "users": {
+        "total": 39
+    }
+}

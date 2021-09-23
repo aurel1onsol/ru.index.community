@@ -1,0 +1,10 @@
+{
+    "$schema": "../schemas/groups.json",
+    "uri": "mastodon.ml/@rf",
+    "handle": "@rf@mastodon.ml",
+    "title": "Rоссийская🐻Fедерация",
+    "short_description": "Объединение русскоязычных пользователей Федиверса, самая популярная группа общей тематики",
+    "members": 1155,
+    "icon": "rf@mastodon.ml.icon.png",
+    "thumbnail": "rf@mastodon.ml.banner.png"
+}

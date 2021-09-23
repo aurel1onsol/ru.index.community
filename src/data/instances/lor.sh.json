@@ -1,0 +1,26 @@
+{
+    "$schema": "../schemas/instances.json",
+    "uri": "lor.sh",
+    "short_description": "lor.sh is yet another mastodon instance.",
+    "thumbnail": "lor.sh.png",
+    "software": {
+        "name": "mastodon",
+        "version": "3.2.0"
+    },
+    "users": {
+        "total": 618
+    },
+    "posting": {
+        "max_chars": 16384,
+        "poll_settings": {
+            "max_option_chars": 25,
+            "max_options": 4
+        },
+        "post_formats": [
+            "text/plain"
+        ]
+    },
+    "administration": {
+        "cloudflare": true
+    }
+}

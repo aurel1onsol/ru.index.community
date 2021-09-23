@@ -1,0 +1,10 @@
+{
+    "$schema": "../schemas/groups.json",
+    "uri": "mastodon.ml/@utopia",
+    "handle": "@utopia@mastodon.ml",
+    "title": "Utopia",
+    "short_description": "Группа \"Утопия\" предназначена для обсуждения путей создания и принципов существования свободного, независимого общества, альтернативного существующим жестким государственным и корпоративным структурам",
+    "icon": "utopia@mastodon.ml.icon.png",
+    "thumbnail": "utopia@mastodon.ml.banner.png",
+    "members": 43
+}

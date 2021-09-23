@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "http://fedi.inex.dev/schemas/instances.json",
+    "type": "object",
+    "properties": {
+        "handle": {
+            "type": "string"
+        },
+        "uri": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "short_description": {
+            "type": "string"
+        },
+        "thumbnail": {
+            "type": "string"
+        },
+        "icon": {
+            "type": "string"
+        },
+        "members": {
+            "type": "integer"
+        }
+    },
+    "required": [
+        "uri",
+        "handle",
+        "title"
+    ]
+}

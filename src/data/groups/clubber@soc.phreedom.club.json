@@ -1,0 +1,8 @@
+{
+    "$schema": "../schemas/groups.json",
+    "uri": "soc.phreedom.club/users/clubber",
+    "handle": "@clubber@soc.phreedom.club",
+    "title": "СвоБот",
+    "short_description": "Бот клуба \"Свобода\"",
+    "members": 46
+}

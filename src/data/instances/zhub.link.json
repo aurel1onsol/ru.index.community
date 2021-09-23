@@ -1,0 +1,23 @@
+{
+    "$schema": "../schemas/instances.json",
+    "uri": "zhub.link",
+    "short_description": "Небольшой сервер социальной сети Mastodon для русскоязычной аудитории. Сам сервер расположен дома (в EU) у админа, но на хорошем железе, в KVM-виртуалке, обеспечен бесперебойным питанием и подключен к Интернет гигабитным каналом. Так же, домен резолвится и в IPv6-адрес сети Yggdrasil, соответственно, работает через неё тоже. Цензура не предусмотрена. Присоединяйтесь.",
+    "thumbnail": "zhub.link.png",
+    "software": {
+        "name": "mastodon",
+        "version": "3.2.0"
+    },
+    "users": {
+        "total": 28
+    },
+    "posting": {
+        "max_chars": 500,
+        "poll_settings": {
+            "max_option_chars": 25,
+            "max_options": 4
+        },
+        "post_formats": [
+            "text/plain"
+        ]
+    }
+}

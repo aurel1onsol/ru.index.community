@@ -1,0 +1,194 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "$id": "http://fedi.inex.dev/schemas/instances.json",
+    "type": "object",
+    "properties": {
+        "uri": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "short_description": {
+            "type": "string"
+        },
+        "thumbnail": {
+            "type": "string"
+        },
+        "users": {
+            "type": "object",
+            "properties": {
+                "total": {
+                    "type": "integer"
+                },
+                "active_month": {
+                    "type": "integer"
+                },
+                "active_halfyear": {
+                    "type": "integer"
+                }
+            }
+        },
+        "software": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "repository": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "registration": {
+            "type": "object",
+            "properties": {
+                "available": {
+                    "type": "boolean"
+                },
+                "approval_required": {
+                    "type": "boolean"
+                },
+                "invite_required": {
+                    "type": "boolean"
+                },
+                "email_required": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "administration": {
+            "type": "object",
+            "properties": {
+                "contact_email": {
+                    "type": "string"
+                },
+                "server_location": {
+                    "type": "integer"
+                },
+                "bus_factor": {
+                    "type": "integer"
+                },
+                "backups_policy": {
+                    "type": "string"
+                },
+                "federation_policies": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "cloudflare": {
+                    "type": "boolean"
+                },
+                "provider": {
+                    "type": "string"
+                }
+            }
+        },
+        "posting": {
+            "type": "object",
+            "properties": {
+                "max_chars": {
+                    "type": "integer"
+                },
+                "post_formats": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "poll_settings": {
+                    "type": "object",
+                    "properties": {
+                        "max_expiration": {
+                            "type": "integer"
+                        },
+                        "max_option_chars": {
+                            "type": "integer"
+                        },
+                        "max_options": {
+                            "type": "integer"
+                        },
+                        "min_expiration": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "upload_limits": {
+                    "type": "object",
+                    "properties": {
+                        "avatar": {
+                            "type": "integer"
+                        },
+                        "background": {
+                            "type": "integer"
+                        },
+                        "banner": {
+                            "type": "integer"
+                        },
+                        "general": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "storage_quota": {
+                    "type": "integer"
+                }
+            }
+        },
+        "music_library": {
+            "type": "object",
+            "properties": {
+                "federation_enabled": {
+                    "type": "boolean"
+                },
+                "anonymous_can_listen": {
+                    "type": "boolean"
+                },
+                "tracks": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "artists": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "albums": {
+                    "type": "object",
+                    "properties": {
+                        "total": {
+                            "type": "integer"
+                        }
+                    }
+                },
+                "music": {
+                    "type": "object",
+                    "properties": {
+                        "hours": {
+                            "type": "number"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "uri",
+        "software"
+    ]
+}

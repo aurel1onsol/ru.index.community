@@ -1,0 +1,18 @@
+{
+    "$schema": "../schemas/instances.json",
+    "uri": "udongein.xyz",
+    "short_description": "Your friendly local Reisen U. Inaba shrine!",
+    "thumbnail": "udongein.xyz.png",
+    "software": {
+        "name": "pleroma"
+    },
+    "users": {
+        "total": 166
+    },
+    "posting": {
+        "max_chars": 10000
+    },
+    "administration": {
+        "provider": "Hetzner"
+    }
+}
