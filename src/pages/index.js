@@ -5,6 +5,8 @@ import { styled } from '@mui/styles'
 import Link from '../components/Link'
 import DnsOutlined from '@mui/icons-material/DnsOutlined'
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined'
+import MapOutlinedIcon from '@mui/icons-material/MapOutlined'
+import OpenInNewOutlinedIcon from '@mui/icons-material/OpenInNewOutlined'
 
 const LogoWrapper = styled('div')({
   height: 96
@@ -41,6 +43,20 @@ export default function Communities ({ data }) {
                     avatar={<GroupsOutlinedIcon fontSize='large' />}
                     title='Группы'
                     subheader='Каталог русскоязычных групп'
+                  />
+                </CardActionArea>
+              </Card>
+            </Link>
+          </Grid>
+          <Grid item xs={12}>
+            <Link to='https://fediverse.space' target='_blank' rel='noreferrer' color='inherit' underline='none'>
+              <Card variant='outlined'>
+                <CardActionArea>
+                  <CardHeader
+                    avatar={<MapOutlinedIcon fontSize='large' />}
+                    title='Атлас федивёрса'
+                    subheader='Интерактивная карта связей между серверами'
+                    action={<OpenInNewOutlinedIcon color='disabled' fontSize='small' />}
                   />
                 </CardActionArea>
               </Card>
