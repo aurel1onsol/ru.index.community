@@ -51,7 +51,7 @@ export default function Communities ({ data }) {
             </Grid>
           </Grid>
           <Grid item xs={12} md={12} justify='left'>
-            <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} sx={{overflow: 'hidden'}}>
+            <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2} sx={{overflow: 'inherit'}}>
               {instances.map((i) => <MasonryItem key={i.id}><Box><GroupCard instance={i} /></Box></MasonryItem>)}
             </Masonry>
           </Grid>
