@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
-    - run: npm install
+    - run: npm install axios
     - run: npm install -g ajv-cli
     - run: node fetchData.js
     - run: ajv validate -s src/data/schemas/instances.json -d "src/data/instances/*.json"
