@@ -1,0 +1,24 @@
+{
+    "$schema": "../schemas/shitpost.poridge.club.json",
+    "uri": "shitpost.poridge.club",
+    "tittle": "[Shitpost] PoridgeClub",
+    "short_description": "Инстанс с практически полной свободой слова, адекватного админа, кучей плюшек и стабильной работы.",
+    "thumbnail": "shitpost.poridge.club.png",
+    "software": {
+        "name": "Misskey",
+        "version": "12.90"
+    },
+    "users": {
+        "total": 23
+    },
+    "posting": {
+        "max_chars": 5000,
+        "poll_settings": {
+            "max_option_chars": 25,
+            "max_options": 4
+        },
+        "post_formats": [
+            "text/plain"
+        ]
+    },
+}
